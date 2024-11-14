@@ -1,18 +1,12 @@
-from designer import Designer
-from programmer import Programmer
-from tester import Tester
+from abc import ABC, abstractmethod
 
 
-class Company:
-    def __init__(self, employees) -> None:
-        self.employees = employees
-
-    def do_work(self):
-        for employee in self.employees:
+class Company(ABC):
+    def create_software(self):
+        employees = self.get_employees()
+        for employee in employees:
             employee.perform_duties()
 
-
-if __name__ == '__main__':
-    employees = [Designer(), Programmer(), Tester()]
-    company = Company(employees)
-    company.do_work()
+    @abstractmethod
+    def get_employees(self):
+        pass
