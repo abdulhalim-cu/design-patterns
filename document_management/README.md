@@ -2,8 +2,6 @@
 
 This project demonstrates a document management system designed using the **SOLID principles** of object-oriented programming. It handles both read-only and writable documents, ensuring modularity, maintainability, and extensibility.
 
----
-
 ## Design Overview
 
 ### Core Design Principles
@@ -19,15 +17,10 @@ This project demonstrates a document management system designed using the **SOLI
    - The design is open for extension. For example, new types of documents like `EncryptedDocument` can be added without modifying the existing codebase.
    - The `Project` class works with the `Document` abstraction, making it flexible to accommodate new behaviors.
 
----
-
 ## Project Structure
-```markdown
 # Document Management System
 
 This project implements a **Document Management System** following the **SOLID principles** of object-oriented design. It allows managing both read-only and writable documents in a modular, extensible, and maintainable manner.
-
----
 
 ## Key Principles Used
 
@@ -43,7 +36,6 @@ This project implements a **Document Management System** following the **SOLID p
   - New document types (e.g., `EncryptedDocument`) can be added without changing existing code.
   - The `Project` class works with the `Document` abstraction, making it adaptable for new behaviors.
 
----
 
 ## Project Structure
 
@@ -64,8 +56,6 @@ document_management/
 └── main.py                      # Entry point to demonstrate functionality
 ```
 
----
-
 ## Classes and Responsibilities
 
 ### 1. Document (`document/base_document.py`)
@@ -77,7 +67,6 @@ Represents a general, read-only document.
 - **Methods**:
   - `open()`: Opens and displays the content of the document.
 
----
 
 ### 2. WritableDocument (`document/writable_document.py`)
 Extends the `Document` class to add saving functionality.
@@ -85,7 +74,6 @@ Extends the `Document` class to add saving functionality.
 - **Methods**:
   - `save()`: Saves the document and displays a confirmation message.
 
----
 
 ### 3. Project (`project/project.py`)
 Manages both read-only and writable documents in a project.
@@ -98,11 +86,8 @@ Manages both read-only and writable documents in a project.
   - `open_all()`: Opens all documents in the project.
   - `save_all()`: Saves all writable documents in the project.
 
----
 
-## Example Usage
-
-### Code Example
+## Code Example
 
 ```python
 from document.base_document import Document
@@ -130,8 +115,6 @@ if __name__ == "__main__":
     main()
 ```
 
----
-
 ## Running the Project
 
 1. **Clone the Repository**:
@@ -144,8 +127,6 @@ if __name__ == "__main__":
    ```bash
    python main.py
    ```
-
----
 
 ## Example Output
 
@@ -160,8 +141,6 @@ Saving writable documents:
 Saving document: writable.txt
 ```
 
----
-
 ## Advantages of the Design
 
 1. **Separation of Concerns**:
@@ -173,10 +152,8 @@ Saving document: writable.txt
 4. **Maintainability**:
    - Modular design allows easy testing and debugging.
 
----
 
 ## Future Enhancements
 
 - Add support for `EncryptedDocument` or `CompressedDocument` by extending the `Document` base class.
 - Implement additional project-level operations, such as archiving documents or generating reports.
-```
