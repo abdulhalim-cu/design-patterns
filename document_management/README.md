@@ -1,25 +1,5 @@
 # Document Management System
 
-This project demonstrates a document management system designed using the **SOLID principles** of object-oriented programming. It handles both read-only and writable documents, ensuring modularity, maintainability, and extensibility.
-
-## Design Overview
-
-### Core Design Principles
-1. **Single Responsibility Principle (SRP)**:
-   - The `Document` class handles the responsibility of reading/opening documents.
-   - The `WritableDocument` class extends `Document` to add the responsibility of saving documents.
-
-2. **Liskov Substitution Principle (LSP)**:
-   - Any instance of `WritableDocument` can be used wherever `Document` is expected without breaking the functionality.
-   - By separating writable functionality into a subclass, the base class (`Document`) remains compatible with client code.
-
-3. **Open-Closed Principle (OCP)**:
-   - The design is open for extension. For example, new types of documents like `EncryptedDocument` can be added without modifying the existing codebase.
-   - The `Project` class works with the `Document` abstraction, making it flexible to accommodate new behaviors.
-
-## Project Structure
-# Document Management System
-
 This project implements a **Document Management System** following the **SOLID principles** of object-oriented design. It allows managing both read-only and writable documents in a modular, extensible, and maintainable manner.
 
 ## Key Principles Used
