@@ -1,7 +1,3 @@
-Here's a README file that describes your project in terms of the SOLID principles:
-
----
-
 # Order Shipping Project
 
 This project demonstrates the use of the **Strategy** design pattern and adheres to several **SOLID principles** to create a flexible, maintainable structure for calculating shipping costs in an order management system. 
@@ -92,7 +88,3 @@ This allows you to add new shipping strategies without modifying the `Order` cla
 - **Extensibility**: New shipping methods can be added without modifying existing classes.
 - **Maintainability**: Each class has a single responsibility, making the code easier to test and maintain.
 - **Flexibility**: The `Order` class works with any shipping strategy, making the system more adaptable to changes.
-
----
-
-This README highlights the SOLID principles implemented in the project, helping to ensure that the code is clean, extensible, and easy to maintain.
